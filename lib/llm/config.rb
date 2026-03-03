@@ -1,7 +1,7 @@
 require 'ruby_llm'
 
 module Llm::Config
-  DEFAULT_MODEL = 'gpt-4.1-mini'.freeze
+  DEFAULT_MODEL = ENV.fetch('CAPTAIN_DEFAULT_MODEL', 'claude-opus-4.6').freeze
 
   class << self
     def initialized?

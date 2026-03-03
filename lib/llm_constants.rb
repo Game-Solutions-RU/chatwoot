@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 module LlmConstants
-  DEFAULT_MODEL = 'gpt-4.1'
+  DEFAULT_MODEL = ENV.fetch('CAPTAIN_DEFAULT_MODEL', 'claude-opus-4.6')
   DEFAULT_EMBEDDING_MODEL = 'text-embedding-3-small'
-  PDF_PROCESSING_MODEL = 'gpt-4.1-mini'
+  PDF_PROCESSING_MODEL = ENV.fetch('CAPTAIN_PDF_MODEL', 'claude-opus-4.6')
 
   OPENAI_API_ENDPOINT = 'https://api.openai.com'
 
